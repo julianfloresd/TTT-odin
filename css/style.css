@@ -5,14 +5,59 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  color: #324B4B;
 }
+
+/*Variable Declarations */
+:root {
+  --containerBackground: #003E3F;
+  --boxBackground: #afeeee;
+  --playerOneFontColor: #8E8CC0;
+  --playerTwoFontColor: #924560;
+} 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
+header{
+  text-align: center;
+}
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 12px;
+  background-color: var(--containerBackground);
+  padding: 20px;
+}
+
+.box {
+  background-color: var(--boxBackground);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.box:hover {
+  scale: 1.025;
+}
+
+.box:nth-of-type(even) {
+  background-color: #cffdfd;
+}
+
